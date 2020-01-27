@@ -2,14 +2,15 @@
   <ion-toolbar>
     <ion-title>
       auverdionControl
-    </ion-title>
+    </ion-title>    
     <ion-buttons slot="primary">
+      <ion-icon color="danger" positionV="bottom" tooltip="test" name="power"></ion-icon>
       <ion-select value="a" placeholder="Preset A">
         <ion-select-option value="a">Preset A</ion-select-option>
         <ion-select-option value="b">Preset B</ion-select-option>
       </ion-select>
-      <ion-button>
-        <ion-icon slot="icon-only" name="settings"></ion-icon>
+      <ion-button tooltip="Call" navTooltip [event]="tooltipEvent" [duration]="duration">
+        <ion-icon  slot="icon-only" name="settings"></ion-icon>
       </ion-button>
     </ion-buttons>
    
@@ -214,13 +215,68 @@
         </ion-card-content>
       </ion-card>
     </ion-col>
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Phase & Delay</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+          
+        <ion-item>
+          <ion-label>Phase Invertieren (+180°)</ion-label>
+          <ion-toggle></ion-toggle>
+        </ion-item>
+
+        <ion-item>
+          <ion-label>Delay</ion-label>
+          <ion-input type="number" value="0"></ion-input>
+          <ion-label>ms</ion-label>
+        </ion-item>
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+     <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Gain</ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content>
+        
+          <ion-label>Gain</ion-label>
+          <ion-range value="0" class="" pin="true" dualKnobs="false" min="-40" max="20" step="1" snaps="false">
+            <ion-label slot="start">-40db</ion-label>
+            <ion-label slot="end">+20db</ion-label>
+          </ion-range>        
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+
+    <ion-col>
+      <ion-card>
+        <ion-card-header>
+          <ion-card-title>Limiters...</ion-card-title>
+          <ion-card-subtitle>...</ion-card-subtitle>
+        </ion-card-header>
+
+        <ion-card-content>
+        
+              
+
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
   </ion-row>
 </ion-grid>
 
   
 
 
-
+<ion-progress-bar positionV="bottom" tooltip="test" value="0.9"></ion-progress-bar>
 
 
 </ion-content>

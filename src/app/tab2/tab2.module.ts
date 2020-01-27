@@ -5,12 +5,15 @@ import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { Tab2Page } from './tab2.page';
 
+import { TooltipsModule } from 'ionic4-tooltips';
+
 @NgModule({
   imports: [
     IonicModule,
     CommonModule,
     FormsModule,
-    RouterModule.forChild([{ path: '', component: Tab2Page }])
+    RouterModule.forChild([{ path: '', component: Tab2Page }]),
+    TooltipsModule
   ],
   declarations: [Tab2Page]
 })

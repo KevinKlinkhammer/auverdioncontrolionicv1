@@ -8,7 +8,9 @@ import { Chart } from 'chart.js';
 })
 export class Tab2Page {
 
-  
+  tooltipEvent: 'click' | 'press' = 'click';
+  showArrow: boolean = true;
+  duration: number = 3000;
 
   @ViewChild('barChart') barChart;
 

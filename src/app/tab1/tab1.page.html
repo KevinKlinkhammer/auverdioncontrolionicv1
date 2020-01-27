@@ -37,4 +37,15 @@
         <ion-label>Theme Your App</ion-label>
       </ion-item>
     </ion-list>
+
+    <ion-card
+      *ngFor="let Todo of todoList | async"      
+    >
+      <ion-card-header>
+        {{ Todo.title }}
+      </ion-card-header>
+      <ion-card-content>
+        Artist Name: {{ Todo.id }}
+      </ion-card-content>
+    </ion-card>
 </ion-content>
